@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>阴阳图</title>
+<style>
+div{
+    width:0px;
+    height:100px;
+    border-left: 50px solid white;
+    border-right:50px solid black;
+    border-radius: 50px;
+}
+div:before{
+    content:"";
+    display: block;
+    background: black;
+    width:15px;
+    height:15px;
+    border:17.5px solid white;
+    border-radius: 25px;
+    position: relative;
+    left:-25px;
+}
+div:after{
+    content:"";
+    display: block;
+    background: white;
+    width:15px;
+    height:15px;
+    border:17.5px solid black;
+    border-radius: 25px;
+    position: relative;
+    left:-25px;
+}
+</style>
+</head>
+<body bgcolor="aqua">
+<div></div>
+</body>
+</html>

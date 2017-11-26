@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>静态定位</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            position: static;   /* 静态定位相当于还在文档流里，默认值 */
+            /* 不能使用和定位相关的属性 left,top,right */
+        }
+    </style>
+</head>
+<body>
+<div></div>
+<p>
+    这是一个段落
+</p>
+<div></div>
+</body>
+</html>

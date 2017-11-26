@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>absolute绝对定位</title>
+    <style>
+        div{
+            width:200px;
+            height:200px;
+        }
+        #box1{
+            background-color: red;
+            position: absolute; /* 脱离了文档流的位置 */
+            /* 以最近的有定位的父标签的世界坐标进行绝对定位，父如果没有定位标签，找爷爷 */
+            right: 20px;
+            top: 200px;
+        }
+        #box2{background-color: yellow;}
+        #box3{background-color: green;}
+
+    </style>
+
+</head>
+<body>
+<div style="width: 500px;height:500px;background-color: pink;position: fixed">
+    <div id="box1"></div>
+    <div id="box2"></div>
+    <div id="box3"></div>
+</div>
+
+</body>
+</html>

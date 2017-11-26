@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格</title>
+</head>
+<body>
+<!--
+    border:边框宽度
+    width:表格宽度
+    height:高度
+    align:整个页面的对齐 left/center/right
+    bordercolor:边框颜色
+    bgcolor:背景颜色
+    cellspacing:格与格之间的空隙
+    cellpadding:格与文字之间的间隙
+    background:背景图
+ -->
+<table border="1" width="800" height="800" align="center" bordercolor="red" bgcolor="yellow"
+       cellspacing="0" cellpadding="0" background="images/loulou.jpg">
+    <tr align="left" valign="top" bgcolor="yellow">
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+    </tr>
+    <tr align="center" valign="center">
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+    </tr>
+    <tr align="right" valign="bottom">
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+    </tr>
+</table>
+
+<!-- thead,tfoot只能有一对,tbody可以有无数
+    下载单位,如果没有所有数据默认放在一个tbody中,等到全部下载完毕后才一起显示
+-->
+
+<table border = "1" cellspacing="0" align="center" bgcolor="aqua" width="800" height="800">
+    <caption>课程表</caption>
+    <tbody>
+        <tr bgcolor="#ffc0cb">
+          <th>星期一</th>
+          <th>星期二</th>
+          <th>星期三</th>
+          <th>星期四</th>
+          <th>星期五</th>
+        </tr>
+        <tr>
+            <td>数学</td>
+            <td>语文</td>
+            <td>物理</td>
+            <td>生物</td>
+            <td>体育</td>
+        </tr>
+        <tr>
+            <td>数学</td>
+            <td>语文</td>
+            <td>物理</td>
+            <td>生物</td>
+            <td>体育</td>
+        </tr>
+        <tr>
+            <td>数学</td>
+            <td>语文</td>
+            <td>物理</td>
+            <td>生物</td>
+            <td>体育</td>
+        </tr>
+        <tr>
+            <td>数学</td>
+            <td>语文</td>
+            <td>物理</td>
+            <td>生物</td>
+            <td>体育</td>
+        </tr>
+    </tbody>
+
+</table>
+
+</body>
+</html>

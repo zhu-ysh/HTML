@@ -1,0 +1,6 @@
+@charset "UTF-8";
+div{
+    width : 500px;   /* 宽 */
+    height: 300px;   /* 高 */
+    background-color: red;   /* 背景颜色 */
+}

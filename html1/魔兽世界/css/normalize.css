@@ -1,0 +1,27 @@
+@charset "UTF-8";
+/*去掉所有块元素的内外边距*/
+div,p,pre,h1~h6,hr,ul,ol,dl,li,dt,dd,table,tr,td{
+    margin:0;padding: 0;
+}
+
+/*去掉行快的边框*/
+img,select,input,textarea,iframe,button,audio,video{
+    border:none;
+}
+dd, div, dt, fieldset, li, p {
+    display: block;
+}
+/*设置全局的字体，背景色等*/
+body{
+    background-color: #000000;
+    font:normal normal 14px/16px "微软雅黑","宋体";
+    color: #000000;
+}
+/*设置链接的统一风格 */
+a{
+    text-decoration: none;color: #c7c7c7;
+}
+/*设置列表统一风格*/
+ui li,ol li{
+    list-style-type: none;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>新标签</title>
+</head>
+<body>
+
+<audio src="src/MP3.MP3" autoplay="autoplay" controls="controls"></audio>
+<video autoplay="autoplay" src="src/movie.ogg" controls="controls" />
+
+<!-- 新增表单标签-->
+<form action="#">
+    email :<input type="email"/>  <br/>
+    url : <input type="url"/>  <br/>
+    number: <input type="number"/> <br/>
+    range: <input type="range" max="10" min="1"/> <br/>
+    (date, month, week, time, datetime, datetime-local)
+    date : <input type="datetime-local"/> <br/>
+    search : <input type="search" /> <br/>
+    color : <input type="color"/> <br/>
+    <!-- 数据列表 -->
+    <input id="myCar" list="cars" />
+    <datalist id="cars">
+        <option value="BMW">
+        <option value="Ford">
+        <option value="Volvo">
+    </datalist>
+    <input type="submit"/>
+</form>
+
+</body>
+</html>

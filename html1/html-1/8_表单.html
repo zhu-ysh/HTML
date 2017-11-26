@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<HEAD>
+    <meta charset="UTF-8">
+    <title>表单</title>
+</head>
+<body>
+
+<!--
+    action:提交给服务器的页面
+    method:提交方式,get明文 不安全 效率高,256字节
+                    post打包,安全,效率低,无大小限制,上传文件必须只能是post
+-->
+<form action="#" method="get">
+    <!--输入框-->
+    <input type="text" name="username" size="10" maxlength="2"
+    placeholder="请输入用户名" disabled=""/> <br/>
+    <!-- 密码框 -->
+    <input type="password" name="psd"> <br/>
+    <!-- 单选按钮 -->
+    <input type="radio" name="gender" checked="checked" value="male"/>男
+    <input type="radio" name="gender" value="famale" />女<br/>
+    <!-- 多选框 -->
+    <input type="checkbox" name="hobby" value="pashan">爬山
+    <input type="checkbox" name="hobby" value="diaoyu" checked="checked">钓鱼
+    <input type="checkbox" name="hobby" value="changge">唱歌
+    <input type="checkbox" name="hobby" value="tiaowu">跳舞<br/>
+    <!-- 下拉选项 -->
+    <select name="myCar">
+        <optgroup label="宝马">
+            <option value="宝马X1">宝马X1</option>
+            <option value="宝马X2">宝马X2</option>
+            <option value="宝马X3">宝马X3</option>
+        </optgroup>
+        <optgroup label="奔驰">
+            <option value="奔驰S300">奔驰S300</option>
+            <option value="奔驰S400">奔驰S400</option>
+            <option value="奔驰S500">奔驰S500</option>
+        </optgroup>
+    </select> <br/>
+    <!-- 上传文件 -->
+    <input type="file" name="upload" /><br/>
+    <!-- 文本域 -->
+    <textarea cols="50" rows="5">自我介绍</textarea><br/>
+    <!-- 日期 -->
+    <input type="date"/><br/>
+    <!-- 普通按钮 -->
+    <input type="button" value="普通按钮" /><br/>
+    <!-- 数字 -->
+    <input type="number" /><br/>
+    <!-- 提交按钮 -->
+    <input type="submit" value="提交"/><br/>
+    <!--重置按钮-->
+    <input type="reset" value="重置"/>
+</form>
+
+</body>
+</html>
+
+
+
+
+
+
