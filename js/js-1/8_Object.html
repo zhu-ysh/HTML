@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object</title>
+</head>
+<body>
+<script>
+//定义一个对象，有age,name属性，eat方法
+var person = new Object();
+person.age = 10;
+person.name = "张三";
+person.eat = function (something) {
+    document.write(this.name+"is eat"+something);
+}
+person.eat("鱼");
+
+//2.
+//定义类型，js没有类的概念，function做构造函数
+function Person(name,age){
+    this.name = name;
+    this.age = age;
+    this.play = function(){
+        document.write(this.name+","+this.age+"is playing");
+    }
+}
+var p1 = new Person("张三",100);
+p1.play();
+var p2 = new Person("李四",25);
+p2.play();
+
+</script>
+</body>
+</html>
