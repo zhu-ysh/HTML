@@ -7,6 +7,19 @@
 <body>
     <script>
         
+        var array = [100,80,9,20,10];
+        var max = Number.MIN_VALUE;
+        var min = Number.MAX_VALUE;
+
+        for(var w in array){
+            if(array[w]>max){
+                max = array[w];
+            }else if(array[w]<min){
+                min = array[w];
+            }
+        }
+        document.write("最大值："+max+"<br/>")
+        document.write("最小值："+min+"<br/>")
     </script>
 </body>
 </html>
