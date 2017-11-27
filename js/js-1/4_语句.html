@@ -20,13 +20,23 @@
         for(var ii=0;ii<=100;ii++){
             num+=ii;
         }
-        document.write(num+"<br/>")
+        document.write(num+"<br/>");
         //猴子吃桃，吃了9天，最后一天剩了1个桃子，一共多少桃子
         var peach = 1;
-        for(var i = 0;i<9;i++){
+        for(var day = 0;day<9;day++){
             peach = (peach+1)*2;
         }
-        document.write(peach+"<br />")
+        document.write(peach+"<br />");
+
+        var a_str = new Array("abc","def","hij");
+        //in使用下标
+        for(var w in a_str){
+            document.write(w+''+a_str[w]+"<br/>");
+        }
+        //of遍历值
+        for(var v of a_str){
+            document.write(v+"<br/>");
+        }
     </script>
 </body>
 </html>
