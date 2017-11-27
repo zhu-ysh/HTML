@@ -23,7 +23,28 @@
             console.log(t);
         }
 
+        //stack类
+        var array = ["abc",100,true,new Object(),new Date()];
+        var s = array.join("-");
+        console.log(s);
 
+        //弹出一个元素
+        var p = array.pop();
+        console.log("弹出"+p);
+
+        //压入一个元素
+        array.push(false);
+
+        //移除头元素
+        var p2 = array.shift();
+        //压入头元素
+        array.unshift(111);
+        //逆序
+        array.reverse();
+
+        //排序
+        var array2 = [11,88,20,77,55];
+        array2.sort((aa,bb)=>bb-aa);    //
     </script>
 </body>
 </html>
