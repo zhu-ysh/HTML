@@ -10,6 +10,20 @@
         console.log(b);
         var s = new String("abc");
         console.log(s.length);
+
+        var s = new String();
+        console.log(s.length);  //返回字符串长度
+        console.log(s.charAt(0));   //返回给定下标的单个字符
+        var ss = s.concat(s,"ddd"); //连接字符串，返回新字符串
+        console.log(ss);
+
+        s = "11-22-33-44";
+        var s_array = s.split("-"); //切分字符串成数组
+        for(var t of s_array){
+            console.log(t);
+        }
+
+
     </script>
 </body>
 </html>
