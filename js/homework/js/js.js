@@ -42,9 +42,9 @@ function validNumber() {
 
 function validEmail() {
     var value = inpEmail.value;
-    var reg =/^\S{4}@\S{3}.(com|cn|net|org|edu)$/;
+    var reg =/^\w{4}@\w{3}.(com|cn|net|org|edu)$/;
     var result = reg.test(value);
-    if(result===true){
+            if(result===true){
         spEmail.innerHTML ="√";
     }else{
         spEmail.innerHTML = "<strong>邮箱:  xxxx@xxx.com/net/cn/org/edu</strong>"

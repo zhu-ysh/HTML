@@ -6,6 +6,25 @@
 </head>
 <body>
     <script>
+        //g是全局都匹配一遍，i是忽略大小写
+        var par = /[^abcdefl]/ig;
+        document.write("helLo".match(par)+"<br/>");
+
+        var patt =/[a-zA-Z0-9]/g;
+        document.write("hello+_=234".match(patt)+"<br>");
+
+        //匹配要么com要么net要么org
+        var patt2= /(com|net|org)/g;
+        document.write("www.baidu.com".match(patt2)+"<br/>");
+
+        //\b是匹配边界   ^匹配开头 $匹配结尾
+        var patt3 = /\bhello\b/g;
+        document.write("hello hello".match(patt3)+"<br/>");
+
+        var phone = "18698622170";
+        var reg = new RegExp("^1[35789]\\d{9}$");
+        document.write(reg.test(phone));  //测试格式是否正确，返回boolean
+
 
         //练习:prompt匹配 网址http://www.163.com
         while(true ){
