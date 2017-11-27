@@ -20,13 +20,12 @@
     }
     var p1 = new Person("张三",11);
 
-    ////////////////////////////////
     var tt = 'aa';
     function test()
     {
-        alert(tt);
+        document.write(tt);  //预编译 tt为undefined
         var tt = 'dd';
-        alert(tt);
+        document.write(tt);
     }
     test();
 </script>

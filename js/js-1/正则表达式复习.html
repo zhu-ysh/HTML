@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>正则表达式复习</title>
+</head>
+<body>
+    <script>
+
+        //练习:prompt匹配 网址http://www.163.com
+        while(true ){
+            var str = prompt("请输入网址","");
+            var reg2 = new RegExp("^(http|https)://(www.)?\\w{2,10}.(com|cn|net|org)$");
+            var result = reg2.test(str);
+            if(result === true){
+                alert("网址正确");
+                break;
+            }
+        }
+    </script>
+</body>
+</html>

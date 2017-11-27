@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>练习</title>
+</head>
+<body>
+<input type="text" id="inp" onblur="validName()"/>
+<span id="sp"></span>
+
+<script>
+    function validName() {
+        var value = inp.value;
+        if(value.length<8){
+            sp.innerHTML = "<strong>长度不能小于6位</strong>"
+        }else{
+            sp.innerHTML ="";
+        }
+    }
+</script>
+</body>
+</html>
