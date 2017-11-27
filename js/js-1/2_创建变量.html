@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>创建变量</title>
+</head>
+<body>
+    <script>
+        //使用var定义变量
+        var n_i = 10.123;   //Number类型
+        document.write(typeof n_i); //typeof 是运算符，求类型
+        document.write("<br/>");
+        var s_str = '哈哈哈哈哈哈';
+        document.write(typeof s_str);   //string
+        document.write("<br/>");
+        var b_isHappy = false;
+        document.write(typeof b_isHappy);
+        document.write("<br/>");
+
+        var o_obj = new Object();
+        document.write(typeof o_obj);
+        document.write("<br/>");
+
+        document.write(typeof null);
+        document.write("<br/>");
+
+        var a_array = new Array();
+        document.write(typeof  a_array);    //array也是Object
+        document.write("<br/>");
+
+        function eat(){
+        }
+
+        document.write(typeof eat);
+        document.write("<br/>");
+
+        var i;  //变量未声明或者未赋值都是undefined
+        document.write(typeof i);
+    </script>
+</body>
+</html>
