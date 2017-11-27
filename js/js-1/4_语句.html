@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>语句</title>
+</head>
+<body>
+    <script>
+        //js中，只有声明在function中的变量才是局部变量；
+        //其他都是全局变量
+        for(var i = 1;i<=10;i++){
+            //===效率 > ==（底层有一个转换类型的过程，效率低）
+            if(0 === i%2){
+                var j = 100;    //j也是全局变量
+                document.write(i+"<br/>")
+            }
+        }
+        //100以内的和
+        var num = 0;
+        for(var ii=0;ii<=100;ii++){
+            num+=ii;
+        }
+        document.write(num+"<br/>")
+        //猴子吃桃，吃了9天，最后一天剩了1个桃子，一共多少桃子
+        var peach = 1;
+        for(var i = 0;i<9;i++){
+            peach = (peach+1)*2;
+        }
+        document.write(peach+"<br />")
+    </script>
+</body>
+</html>
