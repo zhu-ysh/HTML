@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>function</title>
+</head>
+<body>
+<script>
+    //函数定义
+    function test1(){
+        document.write("test1" +"<br/>");
+    }
+    test1();    //方法名调用
+
+    //参数，方法名上的参数是局部变量，不要加var关键字
+    function test2(a1,a2){
+        document.write(a1+","+a2+"<br/>");
+    }
+    test2(1,2);
+
+    //方法是否可以重载, js没有方法的重载，相同名字的函数可以被覆盖
+    function add(a1,a2){
+        document.write("a1,a2"+"<br/>")
+        return a1+a2;
+    }
+    function add(a1,a2,a3){
+        document.write("a1,a2"+"<br/>")
+        return a1+a2+a3;
+    }
+    document.write(add(1,2)+"<br/>");
+    document.write(add(1,2,3)+"<br/>");
+
+    //所有的js的函数，都是可变长参数,定义的时候可以不写，传参
+    function test3(){
+        //每个方法对象中都有一个默认关键字arguments参数对象
+        document.write("参数个数："+arguments.length);
+        for(var ar of arguments){
+            document.write(" "+ar);
+        }
+        document.write("<br/>");
+    }
+</script>
+</body>
+</html>
