@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>6</title>
+</head>
+<body>
+    <script>
+        function Student(id,name,age,score) {
+            this.id = id;
+            this.name = name;
+            this.age = age;
+            this.score = score;
+        }
+        var s = new Array();
+        var s1 = new Student(10,"大雄",25,0);
+        s.push(s1);
+        s.push(new Student(1,"静香",20,100));
+        s.push(new Student(5,"小夫",23,80));
+        for(var w in s){
+            document.write(s[w].id+"<br/>");
+            document.write(s[w].name+"<br/>");
+            document.write(s[w].age+"<br/>");
+            document.write(s[w].score+"<br/><br/>");
+        }
+    </script>
+</body>
+</html>

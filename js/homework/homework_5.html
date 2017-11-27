@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5</title>
+</head>
+<body>
+    <script>
+        var n_i = Number(prompt("请输入1个整数"));
+        if(n_i%2 === 0){
+            document.write("不是奇数数");
+        }else{
+            if(n_i/100>=1 && n_i/100<=9){
+                if(n_i%23 === 0){
+                    document.write(n_i+"是一个能被23整除的三位奇数")
+                }else {
+                    document.write(n_i+"不是一个能被23整除的三位奇数")
+                }
+            }else{
+                document.write("不是3位数")
+            }
+
+        }
+    </script>
+</body>
+</html>

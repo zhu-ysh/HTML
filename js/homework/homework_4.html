@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>4</title>
+</head>
+<body>
+<script>
+    var n_1 = Number(prompt("请输入第1个整数"));  //确认框
+    var n_2 = Number(prompt("请输入第2个整数"));  //确认框
+    var n_3 = Number(prompt("请输入第3个整数"));  //确认框
+    var array = new Array();
+    array.push(n_1);
+    array.push(n_2);
+    array.push(n_3);
+    array.sort(((aa,bb)=>aa-bb));
+    document.write("排序结果：<br/>");
+    for(var v of array){
+        document.write(v+"<br/>");
+    }
+</script>
+</body>
+</html>
