@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>计划任务</title>
+</head>
+<body>
+<span id="sp"></span>
+<script>
+    var time =window.setInterval(function () {
+        var day = new Date();
+        var time = day.getHours() +":"+ day.getMinutes() +":"+day.getSeconds();
+        sp.innerHTML = time;
+    },1000);
+
+
+
+//    //每隔一秒执行一次，循环执行
+//    var t =window.setInterval(function () {
+//        sp.innerHTML += "a";
+//    },1000);
+</script>
+
+</body>
+</html>

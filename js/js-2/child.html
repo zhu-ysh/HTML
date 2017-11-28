@@ -11,6 +11,13 @@
     var fatherWindow = window.opener;
     //得到父窗口的文档对象，通过文档对象得到id=inp的元素的值，设置cont的值
     cont.value = fatherWindow.document.getElementById("inp").value;
+    //窗体的属性
+    document.write("内高:"+window.innerHeight);
+    document.write("内宽:"+window.innerWidth);
+    document.write("窗高:"+window.outerHeight);
+    document.write("窗宽:"+window.outerWidth);
+    document.write("屏高:"+window.screen.height);
+    document.write("屏宽:"+window.screen.width);
 </script>
 </body>
 </html>
