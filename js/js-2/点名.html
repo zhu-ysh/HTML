@@ -28,7 +28,8 @@
     //点击开始，循环设置数组里面的人名
     function a() {
         t = setInterval(function () {
-           box.innerHTML = array[Math.ceil(Math.random()*array.length-1)];
+            var i = Math.floor(Math.random()*array.length);
+           box.innerHTML = array[i];
         },1)
     };
     function b() {
