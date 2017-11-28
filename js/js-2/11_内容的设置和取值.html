@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>内容的设置和取值</title>
+</head>
+<body>
+<i></i>
+<em></em>
+<span></span>
+<input type="text"/>
+<script>
+    //value innerHTML/innerText
+    var i = document.getElementsByTagName("i")[0];
+    i.innerHTML = "<strong>哈哈</strong>";
+//    i.innerText = "<strong>哈哈</strong>"; //忽略标签
+
+    var inp = document.getElementsByTagName("input")[0];
+    inp.value = "aaaa";
+
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="createDIV()">创建DIV</button>
+<script>
+    function createDIV(){
+        //创建一个元素(标签)
+        var div = document.createElement("div");
+        //设置div的样式
+        div.style.width = "100px";
+        div.style.height = "100px";
+        div.style.background = "red";
+        div.style.color = "green";
+        //创建一个文本节点(内容)
+        var divCont = document.createTextNode("这是一个div");
+        //给div添加文本节点
+        div.appendChild(divCont);
+        //把div添加到body上
+        document.body.appendChild(div);
+    }
+</script>
+
+</body>
+</html>
