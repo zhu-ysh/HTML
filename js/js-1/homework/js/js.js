@@ -1,6 +1,6 @@
 function validName() {
     var value = inpName.value;
-    var reg =/^\D\w*$/;
+    var reg =/^[a-zA-Z_]\w*$/;
     var result = reg.test(value);
     if(result===true){
         spName.innerHTML ="√";
@@ -48,5 +48,14 @@ function validEmail() {
         spEmail.innerHTML ="√";
     }else{
         spEmail.innerHTML = "<strong>邮箱:  xxxx@xxx.com/net/cn/org/edu</strong>"
+    }
+}
+
+function validGender() {
+    //checked选中为true，未选中为false
+    if(g1.checked || g2.checked){
+        alert("有选中性别");
+    }else{
+        alert("性别未选中");
     }
 }

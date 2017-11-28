@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>6</title>
+</head>
+<body>
+    <script>
+        function Student(id,name,age,score) {
+            this.id = id;
+            this.name = name;
+            this.age = age;
+            this.score = score;
+        }
+        var s = new Student(10,"大雄",25,0);
+        //使用in便利对象，得到的是key，对象[key]可以获取对应的值
+
+        for(var w in s){
+            document.write(w+":"+s[w]+"<br/>")
+        }
+    </script>
+</body>
+</html>
