@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chlid</title>
+</head>
+<body>
+<input type="text" id="cont" />
+<script>
+    //得到打开此子窗口的父窗口对象
+    var fatherWindow = window.opener;
+    //得到父窗口的文档对象，通过文档对象得到id=inp的元素的值，设置cont的值
+    cont.value = fatherWindow.document.getElementById("inp").value;
+</script>
+</body>
+</html>
