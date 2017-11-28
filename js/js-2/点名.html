@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>点名</title>
+    <style>
+        div{
+            width: 500px;
+            height: 500px;
+            background-color: #0fdbf3;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box"></div>
+    <button id="btn" onclick="a()">开始</button>
+    <button id="stopBtn" onclick="b()">暂停</button>
+<script>
+    //通过id来获取元素
+    var btn = document.getElementById("btn");
+    var box = document.getElementById("box");
+    var stopBtn = document.getElementById("stopBtn");
+    //创建人名数组
+    var array = new Array("狗","小黑","小亮","小可");
+    var index = 0;
+    var t;
+    //点击开始，循环设置数组里面的人名
+    function a() {
+        t = setInterval(function () {
+           box.innerHTML = array[Math.ceil(Math.random()*array.length-1)];
+        },1)
+    };
+    function b() {
+        clearInterval(t);
+    }
+</script>
+</body>
+</html>
