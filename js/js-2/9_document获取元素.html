@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="box"></div>
+<input type="radio" name="gender" value="male">男
+<input type="radio" name="gender" value="female">女
+
+<ul>
+    <li>list1</li>
+    <li>list2</li>
+    <li>list3</li>
+</ul>
+
+<pre class="style1">
+    这是一个pre格式的段落。
+    这是一个pre格式的段落。
+    这是一个pre格式的段落。
+</pre>
+
+<strong class="style1">这是一个strong标签</strong>
+
+<script>
+    //1.通过ID获取元素
+    var box = document.getElementById("box");
+    box.innerHTML = "这是一个div";
+
+    //2.通过name属性获取元素，集合
+    var radios = document.getElementsByName("gender");
+    //遍历name=gender的标签
+    for(var radio of radios){
+        if(radio.checked){
+            alert(radio.value);
+        }
+    }
+
+    //3.通过标签名,集合
+    var lis = document.getElementsByTagName("li");
+    //如果js->css
+    for(var li of lis){
+        li.style.background = "red";
+    }
+
+    //4.通过class名，集合
+    var cls = document.getElementsByClassName("style1");
+    for(var cl of cls){
+        cl.style.color = "green";
+    }
+
+</script>
+
+
+
+</body>
+</html>
