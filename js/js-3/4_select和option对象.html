@@ -20,8 +20,33 @@
 </select>
 
 <script>
+
     var sel = document.getElementsByTagName("select")[0];
-    document.write(sel.length);
+    document.write(sel.length+"<br/>");
+
+    //得到所有选项
+    var opts = sel.options;
+    for(var opt of opts){
+        document.write("value:"+opt.value+"     text"+opt.text+"<br/>")
+    }
+
+    //获取下标，通过下标获取元素
+    function showItem(sel) {
+        alert(opts[sel.selectedIndex].value);
+    }
+    //设置显示下拉选项
+    sel.size = 5;
+    //设置可以多选
+    sel.multiple = true;
+
+    //添加option
+    var newOpt = document.createElement("option");
+    newOpt.text = "91";
+    newOpt.value = "1991";
+    //添加到sel
+    sel.add(newOpt,null);
+    //移除option，给定下标，下标从0开始
+    sel.remove(11);
 </script>
 </body>
 </html>

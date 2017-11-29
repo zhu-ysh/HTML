@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <style>
+        select{
+            width: 150px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+<select>
+    <option value="1980">80</option>
+    <option value="1981">81</option>
+    <option value="1982">82</option>
+    <option value="1983">83</option>
+    <option value="1984">84</option>
+</select>
+<button id="btn1">>></button>
+<button id="btn2"><<</button>
+<select>
+
+</select>
+
+
+<script>
+    var btn1 = document.getElementById("btn1");
+    var btn2 = document.getElementById("btn2");
+
+    var sels = document.getElementsByTagName("select");
+    sels[0].multiple = true;
+    sels[1].multiple = true;
+
+    sels[0].size = 10;
+    sels[1].size = 10;
+btn1.addEventListener("click",function(){
+    var opts = sels[0].selectedOptions;
+    var length = opts.length;
+    for(var i=0;i<length;i++){
+        sels[1].add(opts[0]);
+    }
+});
+btn2.addEventListener("click",function(){
+    var opts = sels[1].selectedOptions;
+    var length = opts.length;
+    for(var i=0;i<length;i++){
+        sels[0].add(opts[0]);
+    }
+});
+</script>
+</body>
+</html>
