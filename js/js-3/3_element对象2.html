@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>element</title>
+</head>
+<body>
+<ul>
+    <li>li1</li>
+    <li>li2</li>
+    <li>li3</li>
+</ul>
+
+<script>
+    var ul = document.getElementsByTagName("ul")[0];
+    var nodes =ul.childNodes;   //包括文本节点和元素节点
+    var li1 = nodes[1];
+    li1.style.color = "red";
+    var li2 = li1.nextSibling.nextSibling;
+    li2.style.color = "yellow";
+    var li1_2 = li2.previousSibling.previousSibling;
+    //获取父节点
+    li2.parentNode.style.border = "1px solid pink";
+</script>
+</body>
+</html>

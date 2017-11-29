@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>element对象</title>
+</head>
+<body>
+<table border="1" bgcolor="red" width="500" height="300"></table>
+<p id="pp"></p>
+<script>
+    //获取table
+    var tab = document.getElementsByTagName("table")[0];
+    //tab即element,获取所有属性
+    var attrs = tab.attributes;
+    //遍历数组
+    for(var attr of (attrs)){
+        //属性的nodeType = 2
+        document.write("nodeType"+attr.nodeType+"<br/>");
+        document.write("nodeName"+attr.nodeName+"<br/>");
+        document.write("nodeValue"+attr.nodeValue+"<br/>");
+        document.write("<hr />");
+    }
+    //标签的nodeType=1，标签没有nodeValue值
+    document.write("nodeType:"+tab.nodeType+"<br />");
+    document.write("nodeName"+tab.nodeName+"<br/>");
+    document.write("nodeValue"+tab.nodeValue+"<br/>");
+    //创建文本节点添加到
+    var pp = document.getElementById("pp");
+    var text = document.createTextNode("这是一个段落");
+    pp.appendChild(text);
+    //文本节点的nodeType=3，nodeName : #text value就是文本内容
+    document.write("nodeType:"+text.nodeType+"<br />");
+    document.write("nodeName"+text.nodeName+"<br/>");
+    document.write("nodeValue"+text.nodeValue+"<br/>");
+</script>
+</body>
+</html>

@@ -5,52 +5,48 @@
     <title>4</title>
 </head>
 <body>
-<input type="number" id="num1" max="9" min="0">
-<input type="number" id="num2" max="9" min="0">
-<input type="number" id="num3" max="9" min="0">
-<input type="number" id="num4" max="9" min="0">
+<input type="number" name="num" max="9" min="0">
+<input type="number" name="num" max="9" min="0">
+<input type="number" name="num" max="9" min="0">
+<input type="number" name="num" max="9" min="0">
 <button onclick="check()">GO</button>
 <span id="sp"></span>
 <script>
 
-    while(true){
-        var num2_1 = Math.floor(Math.random()*10);
-        var num2_2 = Math.floor(Math.random()*10);
-        var num2_3 = Math.floor(Math.random()*10);
-        var num2_4 = Math.floor(Math.random()*10);
-        if(!(num2_1===num2_2||num2_1===num2_3||num2_1===num2_4||num2_2===num2_3||num2_2===num2_4||num2_3===num2_4)){
-            break;
+    var num2s = [];
+    for(var i=0;i<4;i++){
+        var n = Math.floor(Math.random()*10);
+        if(num2s.indexOf(n)==-1){
+            num2s[i] = n;
+        }else{
+            i--;
         }
     }
-    var num2s = [num2_1,num2_2,num2_3,num2_4];
     var sp = document .getElementById("sp");
     for(var i of num2s){
         sp.innerHTML = num2s;
     }
     function check() {
-        var num1 = document.getElementById("num1");
-        var num2 = document.getElementById("num2");
-        var num3 = document.getElementById("num3");
-        var num4 = document.getElementById("num4");
-        var num1s = [num1,num2,num3,num4];
-
-        var a = 0;
-        var b = 0;
+        var num1s = document.getElementsByName("num");
+        var a = 0,b = 0;
         for(var w in num1s){
             for(var v in num2s){
-                var num11 = Number(num1s[w].value);
-                var num22 = Number(num2s[v]);
-                if(num11 == num22){
+                if(num1s[w].value == num2s[v]){
                     if(w == v){
                         a++;
+                        break;
                     }else{
                         b++;
+                        break;
                     }
                 }
             }
         }
-        alert("A"+a+"B"+b);
-
+        if(a==4){
+            alert("你赢了！！");
+        }else{
+            alert("A"+a+"B"+b);
+        }
     }
 </script>
 </body>

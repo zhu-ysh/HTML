@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加移除事件</title>
+</head>
+<body>
+    <button id="btn">点击</button>
+<script>
+    var btn = document.getElementById("btn");
+    //为btn添加点击事件
+    btn.addEventListener("click",function () {
+        alert("我被点击了");
+    });
+    btn.addEventListener("mouseover",mo);
+    function mo() {
+        alert("鼠标浮动了");
+    }
+    //移除btn上的事件，捆绑方法名
+    btn.removeEventListener("mouseover",mo);
+</script>
+</body>
+</html>
