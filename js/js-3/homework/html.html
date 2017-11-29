@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>html</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <td>选中</td>
+        <td>商品名</td>
+        <td>商品价格</td>
+        <td>商品数量</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" id="a" onclick="sum()"/></td>
+        <td>袜子</td>
+        <td><input type="text" id="b"/></td>
+        <td><input type="number" max="9" min="0"></td>
+    </tr>
+</table>
+<span></span>
+
+<script>
+    var sp = document.getElementsByTagName("span")[0];
+    var total = 0;
+    function sum() {
+        var checkbox = document.getElementById("a");
+        var parent = checkbox.parentNode;
+        var jiaGeValue = parent.nextSibling.nextSibling.nextSibling.nextSibling.childNodes[0].value;
+        var NumValue = parent.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.childNodes[0].value;
+        total = Number(sp.innerText);
+        total += Number(jiaGeValue)*Number(NumValue);
+        sp.innerText = total+"";
+    }
+</script>
+</body>
+</html>

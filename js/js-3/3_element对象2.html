@@ -21,6 +21,17 @@
     var li1_2 = li2.previousSibling.previousSibling;
     //获取父节点
     li2.parentNode.style.border = "1px solid pink";
+
+    //创建一个li,追加到ul上
+    var newLi = document.createElement("li");
+    newLi.innerHTML = "li4";
+    //ul.appendChild(newLi);
+
+    //移除一个孩子
+    ul.removeChild(li1);
+
+    //替换第二个li2
+    ul.replaceChild(newLi,li2);
 </script>
 </body>
 </html>
