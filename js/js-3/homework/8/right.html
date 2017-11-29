@@ -36,7 +36,12 @@
         <td colspan="2" span="2" align="center"><button onclick="Login(this)">登录</button></td>
     </tr>
 </table>
-<script src="js/js.js">
+<script>
+    function Login(but) {
+        var n = document.getElementById("name").value;
+        var d = document.getElementById("dept").value;
+        var p = parent.frames['top'].window.tian();
+    }
 </script>
 </body>
 </html>
