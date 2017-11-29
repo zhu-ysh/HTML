@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>6</title>
+</head>
+<body>
+<span id="sp"></span>&nbsp;<button onclick="window.clearInterval(t)">停止</button><button onclick="go()">继续</button>
+<script>
+    function goo() {
+        var day = new Date();
+        var time = day.getHours() +":"+ day.getMinutes() +":"+day.getSeconds();
+        sp.innerHTML = time;
+    }
+    var t = window.setInterval(goo,1);
+    function go() {
+        t = window.setInterval(goo,1);
+    }
+</script>
+</body>
+</html>

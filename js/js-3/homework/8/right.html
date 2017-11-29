@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>right</title>
+    <style>
+        td{
+            width: 60px;
+        }
+    </style>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <td>姓名:</td>
+        <td><input type="text" id="name" size="10"/></td>
+    </tr>
+    <tr>
+        <td>部门</td>
+        <td>
+            <select id="dept">
+                <option>销售部</option>
+                <option>技术部</option>
+                <option>xx部</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>性别</td>
+        <td>
+            <input type="radio" id="g1" name="gander" value="man" checked="checked"/>男
+            <input type="radio" id="g2" name="gander" value="woman"/>女
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" span="2" align="center"><button onclick="Login(this)">登录</button></td>
+    </tr>
+</table>
+<script src="js/js.js">
+</script>
+</body>
+</html>

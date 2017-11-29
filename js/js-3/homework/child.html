@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chlid</title>
+</head>
+<body>
+<input type="text" id="cont" /><br/>
+<button onclick="sa(cont.value)">发送到父窗口</button>
+<script>
+    function sa(value) {
+        var fatherWindow = window.opener;
+        fatherWindow.document.getElementById("inp").value = value;
+    }
+</script>
+</body>
+</html>
