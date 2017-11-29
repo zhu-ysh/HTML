@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td><input  type="file"><button onclick="add()">添加</button></td>
+        </tr>
+    </table>
+
+<script>
+    var tab = document.getElementsByTagName("table")[0];
+    function add() {
+        var newTr = tab.insertRow();
+        var newTd = newTr.insertCell(0);
+        newTd.innerHTML = "<input type=\"file\"><input type='button' name='delete' onClick=\"deleteTr(this)\" value='删除' />";
+    }
+    function deleteTr(but) {
+        tab.deleteRow(but.parentNode.parentNode.rowIndex);
+    }
+</script>
+</body>
+</html>

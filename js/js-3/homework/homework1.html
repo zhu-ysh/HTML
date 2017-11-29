@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1</title>
+</head>
+<body>
+<input type="text" id="a"/><br/>
+<input type="text" id="b"/><br/>
+<button onclick="check(a.value,b.value)">验证</button>
+<script>
+    function check(a,b) {
+        var reg = new RegExp("^\\S{6,}$");
+        if(!reg.test(a)) {
+            alert("密码必须大于6位");
+        }else if(!(a===b)){
+            alert("您两次输入的密码不一样，请重新输入！");
+        }else{
+            alert("密码验证正确");
+        }
+    }
+</script>
+
+</body>
+</html>

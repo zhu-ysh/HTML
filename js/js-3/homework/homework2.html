@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2</title>
+</head>
+<body>
+userName:<input type="text" id="a" onblur="validName(this.value)"/><br/>
+passWord:<input type="text" id="b"/><br/>
+
+
+<script>
+    function validName(a) {
+        if(a === ""){
+            alert("请输入用户名");
+            document.getElementById("a").focus();
+        }
+    }
+
+</script>
+</body>
+</html>
