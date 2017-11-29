@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <td>abc</td>
+        <td>abc</td>
+        <td>abc</td>
+        <td>abc</td>
+    </tr>
+    <tr>
+        <td>abc</td>
+        <td>abc</td>
+        <td>abc</td>
+        <td>abc</td>
+    </tr>
+    <tr>
+        <td>abc</td>
+        <td>abc</td>
+        <td>abc</td>
+        <td>abc</td>
+    </tr>
+    <tr>
+        <td>abc</td>
+        <td>abc</td>
+        <td>abc</td>
+        <td>abc</td>
+    </tr>
+    <tr>
+        <td>abc</td>
+        <td>abc</td>
+        <td>abc</td>
+        <td>abc</td>
+    </tr>
+    <tr>
+        <td>abc</td>
+        <td>abc</td>
+        <td>abc</td>
+        <td>abc</td>
+    </tr>
+</table>
+
+<script>
+    var tab = document.getElementsByTagName("table")[0];
+    var trs =  tab.rows;  //获取所有的行
+    for(var i = 0;i<trs.length;i+=2){
+        trs[i].style.background = "red";
+        var tds = trs[i].cells;   //通过行获取列
+        for(var j = 1;j<tds.length;j+=2){
+            tds[j].style.background = "yellow";
+        }
+    }
+    //表对象删除行
+    tab.deleteRow(3);
+    //行对象删除列
+    trs[0].deleteCell(0);
+    //添加一行
+    var newTr = tab.insertRow();
+    var newTd = newTr.insertCell(0);
+    var newTd2 = newTr.insertCell(1);
+    var newTd3 = newTr.insertCell(2);
+    var newTd4 = newTr.insertCell(3);
+    newTd.innerHTML = "newTD";
+    newTd2.innerHTML = "newTD2";
+    newTd3.innerHTML = "newTD3";
+    newTd4.innerHTML = "newTD4";
+
+</script>
+
+</body>
+</html>
