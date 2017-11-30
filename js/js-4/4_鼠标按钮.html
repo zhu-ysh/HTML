@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{margin:0;padding:0;}
+    </style>
+</head>
+<body>
+<div style="width: 200px;height:200px;background: red;margin:100px;"></div>
+<script>
+    var div = document.getElementsByTagName("div")[0];
+    document.write(div.offsetLeft+":"+div.offsetTop);
+    div.onclick = function(event){
+        //获取按键
+        alert(event.button); //0 1 2
+        //以元素的左定点作为原点
+        alert(event.offsetX);
+        alert(event.offsetY);
+        //以屏幕的左顶点作为原点
+        alert(event.screenX);
+        alert(event.screenY);
+    }
+</script>
+</body>
+</html>

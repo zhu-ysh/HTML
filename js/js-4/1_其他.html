@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1">
+    <tbody>
+        <tr>
+            <td>1abc</td>
+            <td>abc</td>
+            <td><button onclick="del(this)">删除</button></td>
+            <td>abc</td>
+            <td>abc</td>
+        </tr>
+        <tr>
+            <td>2abc</td>
+            <td>abc</td>
+            <td><button onclick="del(this)">删除</button></td>
+            <td>abc</td>
+            <td>abc</td>
+        </tr>
+        <tr>
+            <td>3abc</td>
+            <td>abc</td>
+            <td><button onclick="del(this)">删除</button></td>
+            <td>abc</td>
+            <td>abc</td>
+        </tr>
+        <tr>
+            <td>4abc</td>
+            <td>abc</td>
+            <td><button onclick="del(this)">删除</button></td>
+            <td>abc</td>
+            <td>abc</td>
+        </tr>
+    </tbody>
+</table>
+
+<ul id="uull">
+    <li>li1</li>
+    <li>li2</li>
+    <li>li3</li>
+    <li>li4</li>
+    <li>li5</li>
+</ul>
+
+<script>
+    function del(btn) {
+        //tr的rowIndex是第几行
+        var tab = document.getElementsByTagName("table")[0];
+        tab.deleteRow(btn.parentNode.parentNode.rowIndex);
+    }
+
+    var uull = document.getElementById("uull");
+
+    //获取所有tab的孩子节点
+    for(var node of uull.childNodes){
+        document.write(node.nodeName+"<br/>");
+    }
+
+    document.write("<hr/>");
+    //获取所有标签节点
+    for(var node2 of uull.children) {
+        document.write(node2.nodeName + "<br/>");
+    }
+
+</script>
+</body>
+</html>

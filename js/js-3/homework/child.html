@@ -9,8 +9,7 @@
 <button onclick="sa(cont.value)">发送到父窗口</button>
 <script>
     function sa(value) {
-        var fatherWindow = window.opener;
-        fatherWindow.document.getElementById("inp").value = value;
+        window.opener.document.getElementById("inp").value = value;
     }
 </script>
 </body>

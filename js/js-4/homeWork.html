@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1</title>
+    <style>
+        font{
+            color: #0fdbf3;
+        }
+    </style>
+</head>
+<body>
+<input type="text" name="aaaa"/>
+<button onclick="ab()">查找</button>
+<p>
+        The word “horse-power” was first used two hundred years ago. James Watt from<br/>
+    a worker‟s family made the world first widely used steam engine. At first, he couldn‟t<br/>
+    tell people how powerful it was, because there were no units at that time. Watt decided<br/>
+    to find out how much work one strong horse could do in one minute. He named that<br/>
+    unit one horse-power. In this way he could measure the work of his steam engine.
+</p>
+<script>
+    function ab(){
+        var inptValue = document.getElementsByName("aaaa")[0].value;
+        var pValue = document.getElementsByTagName("p")[0].innerHTML;
+        var arr = pValue.split(inptValue);
+        var str = "";
+        for(var i in arr){
+            if(!(i==arr.length-1)){
+                str += arr[i]+"<font>"+inptValue+"</font>";
+            }else{
+                str += arr[arr.length-1];
+            }
+        }
+        document.getElementsByTagName("p")[0].innerHTML = str;
+    }
+</script>
+</body>
+</html>

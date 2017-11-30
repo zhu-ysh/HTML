@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div style="width: 200px;height:200px;background: red;position: absolute"></div>
+<script>
+    var div = document.getElementsByTagName("div")[0];
+    document.onkeydown = function(event){
+        var code = event.keyCode;
+        switch (code){
+            //左
+            case 37:div.style.left = (div.offsetLeft - 10) +"px";
+                break;
+            //上
+            case 38:div.style.top = (div.offsetTop - 10) +"px";
+                break;
+            //右
+            case 39:div.style.left = (div.offsetLeft + 10) +"px";
+                break;
+            //下
+            case 40:div.style.top = (div.offsetTop + 10) +"px";
+                break;
+        }
+    }
+</script>
+
+
+</body>
+</html>

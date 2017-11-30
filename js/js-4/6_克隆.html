@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>克隆</title>
+</head>
+<body>
+<table border="1" id="tab">
+    <tr>
+        <td>111</td>
+        <td>222</td>
+        <td>333</td>
+    </tr>
+    <tr id="copy_src">
+        <td>444</td>
+        <td><input type="text" /></td>
+        <td><button onclick="buttonClick()">哈哈</button></td>
+    </tr>
+</table>
+<button id="btn">克隆</button>
+<script>
+    function buttonClick(){
+        alert("哈哈");
+    }
+    var btn = document.getElementById("btn");
+    var tab = document.getElementById("tab");
+    var copy_src = document.getElementById("copy_src");
+    btn.onclick = function(){
+        //true是克隆层子节点，false不克隆子节点
+        var copy_des = copy_src.cloneNode(true);
+        tab.appendChild(copy_des);
+    }
+</script>
+
+
+</body>
+</html>

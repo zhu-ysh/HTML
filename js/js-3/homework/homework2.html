@@ -5,18 +5,25 @@
     <title>2</title>
 </head>
 <body>
-userName:<input type="text" id="a" onblur="validName(this.value)"/><br/>
+userName:<input type="text" id="a" onblur="validName(this)" onfocus="foc()"/><br/>
 passWord:<input type="text" id="b"/><br/>
 
 
 <script>
+    var flag = true;
     function validName(a) {
-        if(a === ""){
-            alert("请输入用户名");
+        if(flag){
+            if(a.value === ""){
+                alert("请输入用户名");
+                a.focus();
+                flag = false;
+            }
         }
-        document.getElementById("a").focus();
     }
-
+    
+    function foc() {
+        flag = true;
+    }
 </script>
 </body>
 </html>
