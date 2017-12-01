@@ -35,20 +35,21 @@
 
     sels[0].size = 10;
     sels[1].size = 10;
-btn1.addEventListener("click",function(){
+
+    btn1.addEventListener("click",function(){
     var opts = sels[0].selectedOptions;
     var length = opts.length;
     for(var i=0;i<length;i++){
         sels[1].add(opts[0]);
     }
-});
-btn2.addEventListener("click",function(){
+    });
+    btn2.addEventListener("click",function(){
     var opts = sels[1].selectedOptions;
     var length = opts.length;
     for(var i=0;i<length;i++){
         sels[0].add(opts[0]);
     }
-});
+    });
 </script>
 </body>
 </html>

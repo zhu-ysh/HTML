@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>html</title>
+</head>
+<body>
+    <select id="sheng" onchange="shengChilk(this)">
+        <option value="0">--请选择--</option>
+        <option value="黑龙江">黑龙江</option>
+        <option value="吉林">吉林</option>
+        <option value="辽宁">辽宁</option>
+    </select>
+    <select id="shi" onchange="shiChilk(this)">
+    </select>
+    <select id="qu">
+    </select>
+
+<script src="js/city.js">
+</script>
+<script>
+    //这6个我也不知道哪里用了，先获取了再说
+    var selSheng = document.getElementById("sheng");
+    var opts = selSheng.options;
+    var selShi = document.getElementById("shi");
+    var optss = selShi.options;
+    var selQu = document.getElementById("qu");
+    var optqu = selShi.options;
+
+    function shiChilk(sel) {//省的点击
+        deleteQu();
+        var nameValue = "" + optss[sel.selectedIndex].value;
+        for(let i in city){
+            for(let j of city[i].cityList){
+                if(j.name == nameValue){
+                    var areaList = j.areaList;
+                }
+            }
+        }
+        var areaListName = new Array();
+        for(let i in areaList){
+            areaListName.push(areaList[i]);    //array没有add方法？很气
+        }
+        toQuOption(areaListName);
+    }
+
+    function shengChilk(sel) {//省的点击
+        deleteShi();
+        deleteQu();
+        var nameValue = "" + opts[sel.selectedIndex].value;
+        for(let i in city){
+            if(city[i].name == nameValue){
+                var cityList = city[i].cityList;
+            }
+        }
+        var cityListName = new Array();
+        for(let i in cityList){
+            cityListName.push(cityList[i].name);    //array没有add方法？很气
+        }
+        toShiOption(cityListName);
+    }
+
+
+</script>
+</body>
+</html>
