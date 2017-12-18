@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <td>选中</td>
+        <td>商品名</td>
+        <td>商品价格</td>
+        <td>商品数量</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" onclick="changePrice(this)"></td>
+        <td>袜子</td>
+        <td><input type="text"/></td>
+        <td><input type="number" max="9" min="1"/></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" onclick="changePrice(this)"></td>
+        <td>帽子</td>
+        <td><input type="text"/></td>
+        <td><input type="number" max="9" min="1"/></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" onclick="changePrice(this)"></td>
+        <td>鞋子</td>
+        <td><input type="text"/></td>
+        <td><input type="number" max="9" min="1"/></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" onclick="changePrice(this)"></td>
+        <td>衣服</td>
+        <td><input type="text"/></td>
+        <td><input type="number" max="9" min="1"/></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" onclick="changePrice(this)"></td>
+        <td>裤子</td>
+        <td><input type="text"/></td>
+        <td><input type="number" max="9" min="1"/></td>
+    </tr>
+</table>
+总价:<span></span>元
+<script>
+    var span = document.getElementsByTagName("span")[0];
+    var total = 0;
+    function changePrice(radio){
+        if(radio.checked) {
+            var parent = radio.parentNode;
+            var price = parent.nextSibling.nextSibling.nextSibling.nextSibling.childNodes[0];
+            var num = parent.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.childNodes[0];
+            total = Number(span.innerText);
+            total += Number(price.value) * Number(num.value);
+        }else{
+            var parent = radio.parentNode;
+            var price = parent.nextSibling.nextSibling.nextSibling.nextSibling.childNodes[0];
+            var num = parent.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.childNodes[0];
+            total = Number(span.innerText);
+            total -= Number(price.value) * Number(num.value);
+        }
+        span.innerText = total + "";
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="inp"/>
+<button onclick="cli(this)">1</button>
+<button onclick="cli(this)">2</button>
+<button onclick="cli(this)">3</button>
+<button onclick="cli(this)">4</button>
+<button onclick="add()">+</button>
+<button onclick="equal()">=</button>
+<script>
+var first;
+var flag;
+function cli(btn){
+    inp.value += btn.innerHTML;
+}
+function add(){
+    first = Number(inp.value);
+    flag = "+";
+    inp.value = "";
+}
+function equal(){
+    if(flag=="+"){
+        inp.value = first+Number(inp.value);
+    }
+}
+
+/*
+//1
+document.write("你好！世界欢迎你！");
+//2
+document.write("你好!<br/>世界欢迎你！。");
+//3
+var n1 = prompt("1");
+var n2 = prompt("2");
+var n3 = prompt("3");
+alert((Number(n1)+Number(n2)+Number(n3))/3);
+
+//4
+var array = [Number(n1),Number(n2),Number(n3)];
+array.sort((a1,a2)=>a2-a1);
+for(var a of array){
+    document.write(a+"<br/>");
+}
+
+//5
+var nn = Number(prompt("num:"));
+if(nn>=100 && nn<1000 && nn%23==0 && nn%2==1){
+    document.write("yes");
+}else{
+    document.write("no");
+}
+
+
+var student  = {
+    "id":1,
+    "name":"张三",
+    "score":99
+};
+//使用in遍历对象，得到的是key，对象[key]可以获取对应的值
+for(var s in student){
+    document.write(s+":"+ student[s]+"<br/>");
+}
+document.write(student["id"]);
+document.write(student.id);
+
+//7
+var date = new Date();
+document.write(date.getFullYear()+"-"+(date.getMonth()+1)+"-"+date.getDate()+" "+date.getHours()+":"+date.getMinutes()+":"+date.getSeconds());
+
+
+//8
+var arr = [234,123,4653,22,11,8,-199];
+var min = arr[0];
+var max = arr[0];
+for(var t of arr){
+    if(min > t){
+        min = t;
+    }
+    if(max < t){
+        max = t;
+    }
+}
+document.write(min+":"+max);
+
+
+//9
+var aaa = Number(prompt("aaa:"));
+var flag = prompt("flag:");
+var bbb = Number(prompt("bbb:"));
+
+if(flag==="+"){
+    alert(aaa+bbb);
+}else if(flag==="-"){
+    alert(aaa-bbb);
+}else if(flag==="*"){
+    alert(aaa*bbb);
+}else if(flag==="/"){
+    if(bbb==0){
+        alert("不能为0");
+    }else {
+        alert(aaa / bbb);
+    }
+}
+*/
+
+
+
+</script>
+</body>
+</html>
