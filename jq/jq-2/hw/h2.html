@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>xx</title>
+    <style>
+        select{width:200px;height:300px;font-size: 20px;}
+    </style>
 </head>
 <body>
 <select id="sel" size="10" multiple = "true">
@@ -24,11 +27,20 @@
     var $_sel = $("#sel");
 
     $("#up").click(function () {
-            $_sel.children(":selected").insertBefore($_sel.children(":selected").prev());
+        var $_otnSels = $_sel.children(":selected");
+        for(let i in $_otnSels){
+            $_otnSels.eq(i).insertBefore($_otnSels.prev().eq(i));
+        }
     })
 
+
+
     $("#down").click(function () {
-            $_sel.children(":selected").insertAfter($_sel.children(":selected").next());
+        var $_otnSels = $_sel.children(":selected");
+        var $_nexts = $_otnSels.next();
+        for(let i = 0;i < $_otnSels.length;i++){
+            $_otnSels.eq(i).insertAfter($_nexts.eq(i));
+        }
     })
 </script>
 </body>
