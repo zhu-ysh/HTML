@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>html</title>
+</head>
+<body>
+    <select id="sheng">
+        <option value="0">--请选择--</option>
+    </select>
+    <select id="shi">
+        <option value="0">--请选择--</option>
+    </select>
+    <select id="qu">
+        <option value="0">--请选择--</option>
+    </select>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/city.js">
+</script>
+<script>
+    $(function () {
+        for(let i of city){
+            var $_opt = $("<option></option>");
+            $_opt.val(i.name);
+            $_opt.text(i.name);
+            $("#sheng").append($_opt);
+        }
+    })
+
+    $("#sheng").change(function () {
+        $("#shi").empty();
+        $("#qu").empty();
+        $("#qu").append($("<option value=\"0\">--请选择--</option>"));
+        var $_sheng = $(this).children(":selected");
+        for(let i of city){
+            if(i.name == $_sheng.text()){
+                for(let j of i.cityList){
+                    var $_opt = $("<option></option>");
+                    $_opt.val(j.name);
+                    $_opt.text(j.name);
+                    $("#shi").append($_opt);
+                }
+            }
+        }
+    })
+
+    $("#shi").change(function () {
+        $("#qu").empty();
+        var $_shi = $(this).children(":selected");
+        for(let k of city){
+            for(let i of k.cityList){
+                if(i.name == $_shi.text()){
+                    for(let j of i.areaList){
+                        var $_opt = $("<option></option>");
+                        $_opt.val(j);
+                        $_opt.text(j);
+                        $("#qu").append($_opt);
+                    }
+                }
+            }
+        }
+    })
+
+
+
+/*
+    var selSheng = document.getElementById("sheng");
+    var opts = selSheng.options;
+    var selShi = document.getElementById("shi");
+    var optss = selShi.options;
+    var selQu = document.getElementById("qu");
+    var optqu = selShi.options;
+
+    function shiChilk(sel) {//省的点击
+        deleteQu();
+        var nameValue = "" + optss[sel.selectedIndex].value;
+        for(let i in city){
+            for(let j of city[i].cityList){
+                if(j.name == nameValue){
+                    var areaList = j.areaList;
+                }
+            }
+        }
+        var areaListName = new Array();
+        for(let i in areaList){
+            areaListName.push(areaList[i]);
+        }
+        toQuOption(areaListName);
+    }
+
+    function shengChilk(sel) {//省的点击
+        deleteShi();
+        deleteQu();
+        var nameValue = "" + opts[sel.selectedIndex].value;
+        for(let i in city){
+            if(city[i].name == nameValue){
+                var cityList = city[i].cityList;
+            }
+        }
+        var cityListName = new Array();
+        for(let i in cityList){
+            cityListName.push(cityList[i].name);
+        }
+        toShiOption(cityListName);
+    }
+*/
+
+
+</script>
+</body>
+</html>

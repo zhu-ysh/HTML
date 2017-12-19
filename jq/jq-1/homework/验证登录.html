@@ -64,10 +64,9 @@ function validEmail(inp){
         emasp.innerHTML = "邮箱不合法";
     }
 }
-
 function validGender(){
     //checked选中为true,未选中为false
-    if(g1.checked || g2.checked){
+    if( $('#g1:checked').val() || $('#g2:checked').val()){
         alert("有选中性别");
     }else{
         alert("性别未选中");

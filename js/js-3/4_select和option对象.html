@@ -27,7 +27,7 @@
     //得到所有选项
     var opts = sel.options;
     for(var opt of opts){
-        document.write("value:"+opt.value+"     text"+opt.text+"<br/>")
+        document.write("value:"+opt.value+"text"+opt.text+"<br/>")
     }
 
     //获取下标，通过下标获取元素
@@ -35,6 +35,7 @@
         alert(opts[sel.selectedIndex].value);
     }
     //设置显示下拉选项
+
     sel.size = 5;
     //设置可以多选
     sel.multiple = true;

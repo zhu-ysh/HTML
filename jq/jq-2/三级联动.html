@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<select id="province">
+    <option>请选择</option>
+</select>
+<select id="city">
+    <option>请选择</option>
+</select>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script>
+var provinces =[
+    {
+    "provinceName":"辽宁",
+    "citys":["大连","沈阳","鞍山"]
+    },
+    {
+        "provinceName":"吉林",
+        "citys":["长春","吉林","四平"]
+    },
+    {
+        "provinceName":"四川",
+        "citys":["成都","攀枝花","绵阳"]
+    }
+];
+
+    //js   window.onload();
+    $(function(){
+        for(var province of provinces){
+            var $_opt = $("<option></option>");
+            $_opt.text(province.provinceName);
+            $("#province").append($_opt);
+        }
+        $("#province").change(function(){
+            $("#city").empty();
+            var $_province = $(this).children(":selected");
+            for(var province of provinces){
+                if(province.provinceName == $_province.text()){
+                    for(var city of province.citys){
+                        var $_opt = $("<option></option>");
+                        $_opt.text(city);
+                        $("#city").append($_opt);
+                    }
+                }
+            }
+        });
+    });
+
+</script>
+</body>
+</html>

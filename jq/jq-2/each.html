@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>each</title>
+</head>
+<body>
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script>
+    //为每个匹配元素执行函数
+$("li").each(function(i,e){
+    alert("下标是："+i);
+    alert(e.innerHTML);
+})
+
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li>li1</li>
+    <li>li2</li>
+    <li>li3</li>
+    <a href="#">百度</a>
+    <span>这是一个span</span>
+    <ul>
+        <li>lllllllll</li>
+        <li>222222222</li>
+        <li>333333333</li>
+    </ul>
+</ul>
+<li>otherli</li>
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script>
+    //只找直接子元素
+    $("ul:first").children("li").css("font-size","50px");
+
+</script>
+</body>
+</html>

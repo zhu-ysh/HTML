@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div></div>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script>
+    $("div").css({"width":"200px","height":"200px","background":"red","position":"absolute"});
+
+
+    setTimeout(function(){
+        $("div").animate({"width":"50px","height":"50px","background":"blue","left":"300px","top":"300px"},callBack);
+    },1000);
+
+    function callBack(){
+        $("div").animate({"width":"200px","height":"200px","background":"blue","left":"0px","top":"0px"});
+    }
+</script>
+</body>
+</html>

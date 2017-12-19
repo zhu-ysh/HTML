@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>练习2</title>
+</head>
+<body>
+    <div id="box" style="background-color: #f8b700;width: 200px;height: 200px;">
+        这是一个div ,单击此div,div中添加一个button,双击div,克隆此div到此div下点击button后,移除此div
+    </div>
+<script>
+    var divs = document.getElementsByTagName("div");
+    function addEvent(div){
+        box.onclick = function(){
+            var btn = document.createElement("button");
+            btn.innerHTML = '移除';
+            btn.onclick = function () {
+                document.body.removeChild(this.parentNode);
+                event.stopPropagation();
+            }
+            box.appendChild(btn);
+        }
+
+        box.onclick = function (event) {
+            var new_div = this.cloneNode(true);
+            document.body.appendChild(new_div);
+            var chs = new_div.chlidren;
+            for(var cha of chs){
+                if(ch.nodeName = "BUTTON"){
+                    ch.onclick = function (event2) {
+                        document.body.removeChild(this.parentNode);
+                        event2.stopPropagation();
+                    }
+                }
+            }
+            addEvent(new_div);
+        }
+    }
+    addEvent(box);
+</script>
+</body>
+</html>

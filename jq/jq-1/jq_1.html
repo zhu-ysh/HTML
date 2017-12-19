@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="box1" class="style1">div1</div>
+    <div id="box2" class="style1">div2</div>
+    <div id="box3" class="style1">div3</div>
+    <div id="box4" class="style1">div4</div>
+<script src="js/jquery-3.2.1.min.js"></script>
+<SCRIPT>
+    //JS
+    var div = document.getElementsByTagName("div")[0];
+    div.style.background = "yellow";
+
+    //jq
+    $("#box2,#box4").css("background","green").css("color","yellow");
+
+    //js -> jq  $(js变量) 不加双引号
+    $(div).css("font-size","100px");
+    //jq->js get()
+    $("div").get(0).innerHTML = "aaaaaaaaa";
+    //jq -> js []
+    $("div")[0].innerHTML = "bbbbbbbbb";
+    $("div")[2].style.background="pink";
+</SCRIPT>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li class="star">3</li>
+    <li>4</li>
+    <li>5</li>
+</ul>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script>
+    //返回所有同级之后的所有元素
+  $("li.star").nextAll().css("color","red" )
+  $("li.star").prevAll().css("color" ,"pink");
+</script>
+</body>
+</html>

@@ -38,14 +38,14 @@ function toQuOption(name) {
 function deleteShi() {
     var optss = selShi.options;
     var length = optss.length;
-    for(let i = 0;i<length-1;i++){
+    for(let i = 0;i<length;i++){
         selShi.remove(0);
     }
 }
 function deleteQu() {
     var optqu = selQu.options;
     var length = optqu.length;
-    for(let i = 0;i<length-1;i++){
+    for(let i = 0;i<length;i++){
         selQu.remove(0);
     }
 }

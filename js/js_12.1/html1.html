@@ -19,7 +19,7 @@
 <script src="js/city.js">
 </script>
 <script>
-    //这6个我也不知道哪里用了，先获取了再说
+
     var selSheng = document.getElementById("sheng");
     var opts = selSheng.options;
     var selShi = document.getElementById("shi");
@@ -39,7 +39,7 @@
         }
         var areaListName = new Array();
         for(let i in areaList){
-            areaListName.push(areaList[i]);    //array没有add方法？很气
+            areaListName.push(areaList[i]);
         }
         toQuOption(areaListName);
     }
@@ -55,7 +55,7 @@
         }
         var cityListName = new Array();
         for(let i in cityList){
-            cityListName.push(cityList[i].name);    //array没有add方法？很气
+            cityListName.push(cityList[i].name);
         }
         toShiOption(cityListName);
     }

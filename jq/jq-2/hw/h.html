@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xx</title>
+</head>
+<body>
+<select size="10">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+    <option>6</option>
+    <option>7</option>
+    <option>8</option>
+    <option>9</option>
+    <option>0</option>
+</select>
+<button id="up">↑</button>
+<button id="down">↓</button>
+<script src="../js/jquery-3.2.1.min.js"></script>
+<script>
+    var $_sel = $("select");
+    var $_opts = $_sel.children();
+
+    $("#up").click(function () {
+        var $_optSel = $_sel.children(":selected");
+        if($_optSel){
+            $_optSel.prev().before($_optSel.clone());
+            $_optSel.remove();
+        }else{
+            alert("第一个走不了")
+        }
+    })
+
+    $("#down").click(function () {
+        var $_optSel = $_sel.children(":selected");
+        $_optSel.next().after($_optSel.clone());
+        $_optSel.remove();
+    })
+
+
+
+
+
+</script>
+</body>
+</html>

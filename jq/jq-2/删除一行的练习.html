@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>练习</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>
+            <input type="file"/>
+            <button>添加</button>
+        </td>
+    </tr>
+</table>
+<script src="js/js/jquery-3.2.1.min.js"></script>
+<script>
+$("button:first").click(function () {
+    // var $_tr = $("tr:first").clone();
+    // var $_btn = $_tr.find("button");
+    // $_btn.html("删除");
+    // $_tr.appendTo("table");
+    // $_btn.click(function () {
+    //     $_tr.remove();
+    // })
+
+    var $_tr = $("<tr></tr>");
+    var $_td = $("<td></td>");
+    var $_inp = $("<input type='file' />");
+    var $_btn = $("<button>删除</button>");
+    $_inp.appendTo($_td);
+    $_btn.appendTo($_td);
+    $_td.appendTo($_tr);
+    $_tr.appendTo("table");
+    $_btn.click(function () {
+        $_tr.remove();
+    })
+
+})
+    
+</script>
+
+
+</body>
+</html>

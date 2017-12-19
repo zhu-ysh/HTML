@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<style>
+*{margin:0;padding:0;}
+#box{width:1366px; height:768px;margin:0 auto;}
+main{width:inherit;height:718px;background: url("images/bg.png");overflow: hidden;  }
+footer{width:inherit;height: 50px;background-color: #0569a7; }
+#m_title{height:40px;font-size:40px;line-height: 40px;color:white;font-family: "微软雅黑";
+font-weight:bold;letter-spacing:0px;margin-top:72px;text-align: center;}
+section{width:350px;height:380px;border:18px solid rgba(149,227,239,0.5);
+    margin-top:79px;margin-left: 489px;border-radius: 5px;}
+input{heigth:40px;width:272px;border:none;line-height: 40px;}
+#username{margin-top:110px; margin-left:57px;}
+#userpsd{margin-top:46px; margin-left:57px;}
+#login_btn{text-decoration: none;display: block;
+    height: 37px;
+    width: 301px;
+    margin-top: 52px;
+    margin-left: 23px;}
+span{
+    display: block;
+    text-align: center;
+    color:white;
+}
+</style>
+</head>
+<body>
+<div id="box">
+    <main>
+        <h1 id="m_title">JAVA1707登录页面</h1>
+        <section>
+            <input type="text" id="username"/>
+            <input type="text" id="userpsd"/>
+            <a href="#" id="login_btn"></a>
+        </section>
+    </main>
+    <footer>
+        <span>Copyrights 2005-2013 rjh.com.cn All Right Reserved</span>
+        <span>党委办公室、院长办公室主办 党委宣传科协办 计算机中心制作 练习电话:021-64370045沪ICP备08114583</span>
+    </footer>
+</div>
+
+
+
+<script>
+    var username = document.getElementById("username");
+    var userpsd = document.getElementById("userpsd");
+
+    username.onblur = function(){
+        var value = this.value;
+        var regExp = /^[a-zA-Z_]\w{5,}$/;
+        if(regExp.test(value)){
+            userpsd.focus();
+        }else{
+            alert("格式不正确");
+        }
+    }
+
+    userpsd.onblur = function(){
+        var value = this.value;
+        var regExp1 = /^\d{8,}$/;
+        var regExp2 = /^[a-zA-Z]{8,}$/;
+        var regExp3 = /^[a-zA-Z0-9]{8,}$/;
+        if(!regExp1.test(value)){
+            if(!regExp2.test(value)){
+                if(!regExp3.test(value)){
+                    alert("格式不正确");
+                }
+            }else{
+                alert("格式不正确");
+            }
+        }else{
+            alert("格式不正确");
+        }
+    }
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

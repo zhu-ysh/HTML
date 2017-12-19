@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>我<span>是</span>段落1</p>
+<p>我<span>是</span>段<span>落2</span></p>
+<p>我是段落3</p>
+<p class="intro">我<span>是</span>段<span>落4</span></p>
+<p class="in">我<span>是</span>段落5</p>
+<p>我<span>是</span>段<span>落6</span></p>
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script>
+    //返回不带有类名 "intro" 的所有 <p> 元素
+//$("p").not(".intro").not(".in").css("color","red");
+    //用函数来选取没有两个 <span> 元素在其内的所有 <p> 元素
+    $("p").not(function(){
+        return $("span",this).length==2;
+    }).css("color","red");
+</script>
+</body>
+</html>

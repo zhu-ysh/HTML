@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jq-2</title>
+</head>
+<body>
+    <ul>
+        <li>li1</li>
+        <li id="style1"></li>
+        <li>li3</li>
+        <li>li4</li>
+        <li>li5</li>
+        <li>li6</li>
+        <li>li7</li>
+    </ul>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script>
+    $("#style1+li").css("background","yellow");
+    $("li:first").css("color","pink");
+    $("li:last").css("color","pink");
+
+    $("li:even").css("border","1px solid green");
+    $("li:odd").css("text-indent","32px");
+</script>
+</body>
+</html>
