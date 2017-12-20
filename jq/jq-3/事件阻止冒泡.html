@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div style="width: 200px;height: 200px;background: red">
+   <button>点击</button>
+    <a href="http://www.baidu.com">百度</a>
+</div>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script>
+    $("div").click(function () {
+        alert("div冒泡");
+    });
+    $("button").click(function (event) {
+        alert("button冒泡");
+        //event.stopPropagation();
+        return false;
+    })
+    $("a").click(function(event){
+        alert("a冒泡");
+        //event.stopPropagation();  //只阻止冒泡
+        return false;// 阻止冒泡和默认事件event.preventDefault();
+    });
+</script>
+</body>
+</html>

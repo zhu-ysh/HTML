@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<select id="sel" multiple="multiple" size="10">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+    <option>6</option>
+</select>
+<button>UP</button>
+<button>DOWN</button>
+
+<script src="../js/jquery-3.2.1.min.js"></script>
+<script>
+    $("button:first").click(function(){
+        //思路是拿到所有被选中的元素
+        var $_selecteds = $("#sel").children(":selected");
+        //获取第一个被选中元素的上一个元素
+        var $_prev = $_selecteds.first().prev();
+        //循环依次添加
+        $_selecteds.each(function(i,e){
+            $_prev.before(e);
+        });
+    });
+    $("button:last").click(function(){
+        //思路是拿到所有被选中的元素
+        var $_selecteds = $("#sel").children(":selected");
+        //获取第一个被选中元素的上一个元素
+        var $_next = $_selecteds.last().next();
+        //循环依次添加
+        var $_selectedFirst;
+        $_selecteds.each(function(i,e){
+            if(i==0) {
+                $_next.after(e);
+                $_selectedFirst = $_next.next();
+            }else{
+                $_selectedFirst.after(e);
+                $_selectedFirst = $_selectedFirst.next();
+            }
+        });
+    });
+</script>
+</body>
+</html>

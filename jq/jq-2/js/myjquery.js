@@ -14,10 +14,10 @@ function $(selector) {
     if (typeof selector == "string") {
         var firstChar = selector.charAt(0);
         if(firstChar == "#"){
-            var sel =  document.getElementById(selector);
+            var sel =  document.getElementById(selector.substr(1));
             elements.push(sel);
         }else if(firstChar == "."){
-            var sels = document.getElementsByClassName(selector);
+            var sels = document.getElementsByClassName(selector.substr(1));
             for(var sel of sels) {
                 elements.push(sel);
             }

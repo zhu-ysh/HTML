@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div></div>
+<button>点我</button>
+<button>解绑</button>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script>
+function appendChar(){
+    $("div").html($("div").html()+"haha");
+}
+
+function appendChar2(){
+    $("div").html($("div").html()+"hehe");
+}
+
+$(document.body).on("click","button:first",appendChar);
+$(document.body).on("click","button:first",appendChar2);
+
+$("button:last").click(function(){
+    $(document.body).off("click","button:first",appendChar);
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<textarea cols="10" rows="5">1234567890</textarea>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script>
+    $("textarea").select(function(event,data){
+        var end = this.selectionEnd;
+        var start = this.selectionStart;
+        var subs = this.value.substr(start,end-start);
+        alert(subs);
+        alert(document.getSelection());
+
+    });
+</script>
+</body>
+</html>
